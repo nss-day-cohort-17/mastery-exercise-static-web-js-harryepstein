@@ -1,6 +1,6 @@
 /*EXAMPLE OBJECT*/
 let treeObject = {
-height: 0,
+height: 5,
 character: "*",
 }
 
@@ -14,34 +14,26 @@ var button = document.getElementById('grow-button')
 
 button.addEventListener('click', function (mouseEvt){
   console.log(mouseEvt)
+  console.log("you clicked grow")
 
-//   object.character = input.addEventListener('x', function(){
-
-//   })
-//   object.height = input.addEventListener('return', function(){ //ASSIGN THE VALUE IN THE INPUT FIELD TO THE OBJECT.HEIGHT FIELD
-
-
-// })
-// })
 })
 
 let input = document.getElementById("tree-height");
 
 input.addEventListener('keypress', function (keyboardEvt) {
   console.log(keyboardEvt)
-  if(keyboardEvt.key ==='enter')
+  if(keyboardEvt.key ==='Enter')
+    console.log("you pressed enter")
+
     buildAtree(treeObject);
 })
 
 
-
-
 function buildAtree (object){
-
   for (let i = 0; i < object.height; i += object.character)//for the height of the object increment i each time by the character in the objec
   {
-  if (i % 3 ===0)
-    console.log(i)//if i is odd, output i which should be the same number of character of the line number, which should form the correct tree structure
-}
-
+    if (i % 3 ===0)
+      console.log(i)//if i is odd, output i which should be the same number of character of the line number, which should form the correct tree structure
+  }
+  console.log(" ***** \n ***** \n *****\n *****\n *****\n *****\n *****\n" )//every tree needs a trunk
 }
